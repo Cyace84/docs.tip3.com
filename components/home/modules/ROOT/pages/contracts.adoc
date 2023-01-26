@@ -39,6 +39,11 @@
 :TokenRootBurnPausableBase: pass:normal[xref:contracts.adoc#TokenRootBurnPausableBase[`TokenRootBurnPausableBase`]]
 :TokenRootDisableableMintBase: pass:normal[xref:contracts.adoc#TokenRootDisableableMintBase[`TokenRootDisableableMintBase`]]
 :TokenRootTransferableOwnershipBase: pass:normal[xref:contracts.adoc#TokenRootTransferableOwnershipBase[`TokenRootTransferableOwnershipBase`]]
+:xref-TIP3TokenRoot-name--: xref:contracts.adoc#TIP3TokenRoot-name--
+:xref-TIP3TokenRoot-symbol--: xref:contracts.adoc#TIP3TokenRoot-symbol--
+:xref-TIP3TokenRoot-decimals--: xref:contracts.adoc#TIP3TokenRoot-decimals--
+:xref-TIP3TokenRoot-totalSupply--: xref:contracts.adoc#TIP3TokenRoot-totalSupply--
+:xref-TIP3TokenRoot-walletCode--: xref:contracts.adoc#TIP3TokenRoot-walletCode--
 :IBurnPausableTokenRoot: pass:normal[xref:contracts.adoc#IBurnPausableTokenRoot[`IBurnPausableTokenRoot`]]
 :TokenRootBase: pass:normal[xref:contracts.adoc#TokenRootBase[`TokenRootBase`]]
 :xref-TokenRootDisableableMintBase-disableMint--: xref:contracts.adoc#TokenRootDisableableMintBase-disableMint--
@@ -291,7 +296,7 @@
 :ITokenWalletUpgradeable-upgrade: pass:normal[xref:contracts.adoc#ITokenWalletUpgradeable-upgrade-address-[`ITokenWalletUpgradeable.upgrade`]]
 :ITokenWalletUpgradeable-acceptUpgrade: pass:normal[xref:contracts.adoc#ITokenWalletUpgradeable-acceptUpgrade-TvmCell-uint32-address-[`ITokenWalletUpgradeable.acceptUpgrade`]]
 :TokenRootBase-_buildWalletInitData: pass:normal[xref:contracts.adoc#TokenRootBase-_buildWalletInitData-address-[`TokenRootBase._buildWalletInitData`]]
-= TIP3
+= TIP-3
 
 [.readme-notice]
 NOTE: This document is better viewed at https://docs.broxus.com/tip3
@@ -356,6 +361,69 @@ It also includes functionality for transferring ownership of the token root cont
 In addition to these core contracts, there are also several abstract contracts that provide additional functionality. These include {TokenRootBurnableByRootBase}, {TokenRootBurnPausableBase}, {TokenRootDisableableMintBase}, {TokenRootTransferableOwnershipBase}, that add additional functionality to the basic token root contract. These contracts are designed to extend the functionality of TokenRoot contract and allows for burning tokens of any wallet, disabling the ability to burn tokens through the TokenRoot, starting and stopping burning tokens, permanently disabling token minting, transferring ownership of the token root contract and so on.
 
 === Core
+
+:name: pass:normal[xref:#TIP3TokenRoot-name--[`++name++`]]
+:symbol: pass:normal[xref:#TIP3TokenRoot-symbol--[`++symbol++`]]
+:decimals: pass:normal[xref:#TIP3TokenRoot-decimals--[`++decimals++`]]
+:totalSupply: pass:normal[xref:#TIP3TokenRoot-totalSupply--[`++totalSupply++`]]
+:walletCode: pass:normal[xref:#TIP3TokenRoot-walletCode--[`++walletCode++`]]
+
+[.contract]
+[[TIP3TokenRoot]]
+=== `++TIP3TokenRoot++` link:https://github.com/broxus/tip3/contracts/interfaces/TIP3TokenRoot.sol[{github-icon},role=heading-link]
+
+[.hljs-theme-light.nopadding]
+```solidity
+import "@broxus-ton-tokens-contracts/contracts/interfaces/TIP3TokenRoot.sol";
+```
+
+Interface of the TIP-3.1 TokenRoot contract.
+
+[.contract-index]
+.Functions
+--
+* {xref-TIP3TokenRoot-name--}[`++name()++`]
+* {xref-TIP3TokenRoot-symbol--}[`++symbol()++`]
+* {xref-TIP3TokenRoot-decimals--}[`++decimals()++`]
+* {xref-TIP3TokenRoot-totalSupply--}[`++totalSupply()++`]
+* {xref-TIP3TokenRoot-walletCode--}[`++walletCode()++`]
+
+--
+
+[.contract-item]
+[[TIP3TokenRoot-name--]]
+==== `[.contract-item-name]#++name++#++() → string++` [.item-kind]#external#
+
+Returns the name of the token.
+
+[.contract-item]
+[[TIP3TokenRoot-symbol--]]
+==== `[.contract-item-name]#++symbol++#++() → string++` [.item-kind]#external#
+
+Returns the symbol of the token, usually a shorter version of the name.
+
+[.contract-item]
+[[TIP3TokenRoot-decimals--]]
+==== `[.contract-item-name]#++decimals++#++() → uint8++` [.item-kind]#external#
+
+Returns the number of decimals used to get its user representation.
+For example, if `decimals` equals `6`, a balance of `42_500_000` tokens should
+be displayed to a user as `42.5` (`42_500_000 / 10 ** 6`).
+
+NOTE: This information is only used for _display_ purposes: it in
+no way affects any of the arithmetic of the contract.
+
+[.contract-item]
+[[TIP3TokenRoot-totalSupply--]]
+==== `[.contract-item-name]#++totalSupply++#++() → uint128++` [.item-kind]#external#
+
+Returns the amount of tokens in existence.
+
+[.contract-item]
+[[TIP3TokenRoot-walletCode--]]
+==== `[.contract-item-name]#++walletCode++#++() → TvmCell++` [.item-kind]#external#
+
+Returns the `walletCode` of the TokenWallet contract.
 
 :mintDisabled_: pass:normal[xref:#TokenRootDisableableMintBase-mintDisabled_-bool[`++mintDisabled_++`]]
 :disableMint: pass:normal[xref:#TokenRootDisableableMintBase-disableMint--[`++disableMint++`]]
