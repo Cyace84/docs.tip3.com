@@ -1,12 +1,12 @@
 {
-  "name": "openzeppelin-docs-site-theme",
+  "name": "broxus-docs-site-theme",
   "private": true,
   "version": "0.0.0",
-  "description": "The default theme for the openzeppelin documentation site",
-  "homepage": "https://docs.openzeppelin.com",
+  "description": "The default theme for the broxus documentation site",
+  "homepage": "https://docs.broxus.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openzeppelin/docs-site-theme.git"
+    "url": "https://github.com/broxus/docs-site-theme.git"
   },
   "scripts": {
     "build": "rollup -c",

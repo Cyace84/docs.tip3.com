@@ -1,21 +1,23 @@
 site:
-  title: OpenZeppelin Docs
-  url: https://docs.openzeppelin.com
-  start_page: ROOT::index.adoc
-  keys:
-    google_analytics: 'UA-85043059-1'
+  title: TIP-3 Docs
+  url: https://docs.tip.com
+  start_page: ROOT::contracts.adoc
 content:
   sources:
     - url: .
       branches: HEAD
       start_path: components/home
-
-    - url: .
-      branches: HEAD
-      start_path: components/learn
+    # - url: https://github.com/Cyace84/tip3
+    #   branches: tests
+    #   start_path: docs
 ui:
   bundle:
     url: ./ui/theme
 asciidoc:
   attributes:
     idprefix: ''
+antora:
+  extensions:
+    - require: './lunr-tokenizer'
+    - require: '@antora/lunr-extension'
+      index_latest_only: true

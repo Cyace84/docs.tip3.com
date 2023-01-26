@@ -7,7 +7,7 @@
     </svg>
   </button>
 
-  {{#if (eq @root.page.component.name "ROOT")}}
+  {{#if (eq @root.page.component.name "ROOTs")}}
   <div class="nav-components">
     <h3 class="nav-title">Start here</h3>
     {{#each (pick site.components "ROOT, learn")}}
@@ -28,7 +28,7 @@
   {{else}}
   {{#with @root.page.component}}
   <div class="nav-component-active">
-    <a class="btn-back" href="/">Home</a>
+    {{!-- <a class="btn-back" href="/">Home</a> --}}
     <div class="flex justify-justified nav-heading">
       <span class="">{{{./title}}}</span>
       <div class="component-version">
