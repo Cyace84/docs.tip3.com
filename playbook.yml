@@ -1,78 +1,15 @@
 site:
-  title: OpenZeppelin Docs
-  url: https://docs.openzeppelin.com
-  start_page: ROOT::index.adoc
-  keys:
-    google_analytics: 'UA-85043059-1'
+  title: TIP-3 Docs
+  url: https://docs.tip.com
+  start_page: ROOT::contracts.adoc
 content:
   sources:
     - url: .
       branches: HEAD
       start_path: components/home
-
-    - url: .
-      branches: HEAD
-      start_path: components/learn
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-contracts
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-sdk
-      branches: docs-v*
-      start_path: packages/cli/docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-sdk
-      branches: docs-v*
-      start_path: packages/lib/docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-upgrades
-      branches: HEAD
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/starter-kit
-      branches: HEAD # Starter Kit is unversioned
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-test-environment
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-test-helpers
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-gsn-provider
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-gsn-helpers
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-network.js
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-contract-loader
-      branches: docs-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/defender-docs
-      branches: HEAD
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/openzeppelin-subgraphs
-      branches: HEAD
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/cairo-contracts
-      branches: release-v*
-      start_path: docs
-
-    - url: https://github.com/OpenZeppelin/nile
-      branches: release-v*
-      start_path: docs
+    # - url: https://github.com/Cyace84/tip3
+    #   branches: tests
+    #   start_path: docs
 ui:
   bundle:
     url: ./ui/theme
@@ -84,5 +21,3 @@ antora:
     - require: './lunr-tokenizer'
     - require: '@antora/lunr-extension'
       index_latest_only: true
-urls:
-  html_extension_style: drop
